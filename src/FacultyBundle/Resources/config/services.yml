@@ -1,0 +1,4 @@
+services:
+#    faculty.example:
+#        class: FacultyBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

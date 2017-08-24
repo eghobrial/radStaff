@@ -1,0 +1,50 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Faculty list</h1>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Firstname</th>
+                <th>Lastname</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Division</th>
+                <th>Notes</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for faculty in faculties %}
+            <tr>
+                <td><a href="{{ path('faculty_show', { 'id': faculty.id }) }}">{{ faculty.id }}</a></td>
+                <td>{{ faculty.firstname }}</td>
+                <td>{{ faculty.lastname }}</td>
+                <td>{{ faculty.email }}</td>
+                <td>{{ faculty.phone }}</td>
+                <td>{{ faculty.division }}</td>
+                <td>{{ faculty.notes }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('faculty_show', { 'id': faculty.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('faculty_edit', { 'id': faculty.id }) }}">edit</a>
+                        </li>
+
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('faculty_new') }}">Create a new faculty</a>
+        </li>
+    </ul>
+{% endblock %}
