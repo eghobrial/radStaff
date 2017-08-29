@@ -1,3 +1,15 @@
+Rad Staff
+=========
+
+Welcome to radstaff this Symfony application was build using composer 
+and the Symfony Standard Edition as part of a demo of UCCSC 2017 presentation
+
+Below is a description on the standard Edition and its bundles.
+
+In addition this package utilize the doctrine fixtures bundle for loading
+data to the data base
+
+
 Symfony Standard Edition
 ========================
 
